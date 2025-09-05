@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نفوذ موفق</title>
+    <style>
+        /* فونت مناسب که نه خیلی ساده و نه خیلی پیچیده باشه */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif; /* فونت مداری */
+            background-color: #0a0a0a; /* سیاه خیلی تیره */
+            color: #00ff00; /* سبز نئونی */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* حداقل ارتفاع صفحه */
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden; /* جلوگیری از اسکرول افقی */
+            /* افکت هاله کد هکری ملایم تر */
+            background: radial-gradient(ellipse at center, rgba(0,50,0,0.3) 0%, rgba(0,0,0,0.9) 70%),
+                        url('code_lines_pattern.png') repeat center center; /* الگوی خطوط کد */
+            background-size: 100% 100%, 150px 150px; /* اندازه پس زمینه و الگو */
+            animation: subtleCodeGlow 15s infinite alternate ease-in-out;
+        }
+
+        @keyframes subtleCodeGlow {
+            0% { background-position: center, center; opacity: 1; }
+            50% { background-position: center, 20px 20px; opacity: 0.9; }
+            100% { background-position: center, center; opacity: 1; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.75); /* پس زمینه کمی روشن تر و شفاف تر */
+            padding: 35px 25px;
+            border-radius: 12px;
+            border: 2px solid #00ff00; /* حاشیه سبز */
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), /* سایه بیرونی ملایم تر */
+                        0 0 8px rgba(0, 255, 0, 0.3) inset; /* سایه داخلی */
+            max-width: 85%;
+            width: 100%;
+            box-sizing: border-box;
+            animation: containerPulse 2.5s infinite; /* افکت ضربان کمی آرام تر */
+        }
+
+        @keyframes containerPulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.015); opacity: 0.95; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h1.main-success {
+            color: #ffff00; /* زرد برای تیتر */
+            font-size: 2.6em;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(255, 255, 0, 0.8),
+                         0 0 4px rgba(255, 255, 0, 0.4);
+        }
+
+        .message {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            text-shadow: 0 0 6px rgba(0, 255, 0, 0.5);
+        }
+
+        .critical-warning {
+            color: #ff0000; /* قرمز برای پیام حیاتی */
+            font-size: 1.9em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 0 0 12px rgba(255, 0, 0, 0.8),
+                         0 0 4px rgba(255, 0, 0, 0.4) inset;
+            animation: blink-critical 1.5s infinite;
+        }
+
+        @keyframes blink-critical {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.75; }
+        }
+
+        .backup-advice {
+            font-size: 1.1em;
+            margin-top: 12px;
+            color: #cccccc; /* خاکستری روشن */
+            line-height: 1.7;
+        }
+
+        .hacker-motto {
+            margin-top: 22px;
+            font-size: 1.6em; /* کمی کوچکتر از قبل */
+            color: #ffaa00; /* نارنجی مایل به طلایی */
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(255, 170, 0, 0.7);
+        }
+
+        .final-reveal {
+            margin-top: 25px;
+            font-size: 1.0em; /* کوچکتر */
+            color: #aaaaaa; /* خاکستری */
+            line-height: 1.8;
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .final-reveal strong {
+            color: #ff0000; /* قرمز */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>نفوذ به سیستم با موفقیت انجام شد</h1>
+        <p class="message">اطلاعات شما هک شده است.</p>
+        <p class="critical-warning">توصیه می‌شود سیمکارت موبایلتان را در بیاورید وگرنه ممکن است تا 24 ساعت دیگر از کار بیفتد!</p>
+        <p class="backup-advice">همچنین بهتر است بکاپی از اطلاعات خود داشته باشید، وگرنه ممکن است پاک شود.</p>
+        <p class="hacker-motto"></p>
+        <div class="final-reveal">
+            <strong>هشدار:</strong> این یک لینک فیشینگ بود! از این به بعد به کسی اعتماد نکن!
+        </div>
+    </div>
+
+    <!-- برای این افکت، فایل 'code_lines_pattern.png' باید در کنار این فایل HTML قرار گیرد -->
+</body>
+</html>
